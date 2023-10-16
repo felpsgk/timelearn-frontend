@@ -1,8 +1,8 @@
 import React from 'react';
-import './index.css';
+import '../index.css';
 import { Routes, Route } from 'react-router-dom';
-import Login from './components/login';
-import Dash from './pages/dash';
+import Login from './login';
+import Dash from './dash';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <h1>Página Inicial</h1>
       <button
         className='btn-login'
-        onClick={() => { window.location.href = '/login'; }}>
+        onClick={() => { window.location.href = '/'; }}>
         Logar
       </button>
     </div>
