@@ -23,7 +23,7 @@ function Cadastro() {
     }, []);
     const handleCad = async (e) => {
         e.preventDefault();
-        if (!nome || !email || !password || !tipo_usuario_id) {
+        if (!nome || !email || !password) {
             alert("Por favor, preencha todos os campos");
             return;
         }
@@ -48,7 +48,7 @@ function Cadastro() {
     };
     return (
         <div className='login-form-wrap'>
-            <h2>Logar</h2>
+            <h2>Cadastrar</h2>
             <form className='login-form'
                 autoComplete='off' required>
                 <input type='nome'
@@ -63,7 +63,7 @@ function Cadastro() {
                     name='password'
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder='Sua senha' required />
-                <input
+                {/* <input
                     placeholder="Escolha seu perfil"
                     list="opts"
                     required
@@ -76,7 +76,7 @@ function Cadastro() {
                             {userType.tipo_usuario}
                         </option>
                     ))}
-                </datalist>
+                </datalist> */}
                 <div className='button-container'>
                     <button type='submit'
                         className='btn-cad'
