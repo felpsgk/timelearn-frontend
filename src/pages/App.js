@@ -1,19 +1,30 @@
-import React from 'react';
-import '../index.css';
-import { Routes, Route } from 'react-router-dom';
-import Login from './login';
-import Dash from './dash';
+import React, { } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+// import { useNavigate } from 'react-router-dom';
+// import axios from 'axios';
+import { useAuth, AuthCheck } from '../scripts/auth'; // Importe o módulo 'auth'
+import Navbar from '../components/navbar';
 
 function App() {
+  const { userData, loading } = useAuth();
+
   return (
-    <div>
-      <h1>Página Inicial</h1>
-      <button
-        className='btn-login'
-        onClick={() => { window.location.href = '/'; }}>
-        Logar
-      </button>
-    </div>
+    <Container fluid>
+      <Row>
+        <Navbar />
+      </Row>
+      <Row>
+        <Container>
+          <Row>
+            <AuthCheck userData={userData} loading={loading}>
+              {userData && (
+                <Col>teste dash.</Col>
+              )}
+            </AuthCheck>
+          </Row>
+        </Container>
+      </Row>
+    </Container>
   );
 }
 

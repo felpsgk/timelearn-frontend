@@ -1,12 +1,21 @@
 body {
   background-color: #9f9da7;
   font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
+  margin: 0;
   color: #2b3e51;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 h2 {
-  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300px;
   text-align: center;
 }
 
@@ -54,7 +63,7 @@ input {
   outline: none;
   height: 60px;
   line-height: 60px;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 input[type="password"],
@@ -87,6 +96,7 @@ input[type="email"]:focus {
 }
 .btn-login {
   border: none;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   background-color: #56b6e9;
@@ -101,6 +111,7 @@ input[type="email"]:focus {
   display: inline-block;
   cursor: pointer;
   text-align: center;
+  margin-inline-end: 10px;
   margin-bottom: 30px;
   margin-top: 10px;
   width: 100%;
@@ -115,6 +126,7 @@ input[type="email"]:focus {
 
 .btn-cad {
   border: none;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   background-color: #2be49d;
@@ -139,4 +151,30 @@ input[type="email"]:focus {
   background-color: #099c64;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+}
+
+.container {
+  background-color: #099c64;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.container-left {
+  position: relative;
+  display: flex;
+  background-color: #58bf97;
+  margin: 10px;
+  padding: 5px;
+  margin-right: 80%;
+  border-radius: 5px;
+}
+
+.container-80 {
+  position: relative;
+  display: flex;
+  background-color: #58bf97;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
 }
